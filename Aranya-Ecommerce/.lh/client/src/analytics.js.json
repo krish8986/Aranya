@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/analytics.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752997626953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752997626953,
+            "name": "Commit-0",
+            "content": "import ReactGA from \"react-ga4\";\r\n\r\nconst trackingID = \"G-XXXXXXX\"; // replace with your Measurement ID\r\n\r\nexport const initGA = () => {\r\n  ReactGA.initialize(trackingID);\r\n};\r\n\r\nexport const trackPageview = (page) => {\r\n  ReactGA.send({ hitType: \"pageview\", page });\r\n};\r\n"
+        }
+    ]
+}

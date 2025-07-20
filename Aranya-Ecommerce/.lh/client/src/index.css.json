@@ -1,0 +1,34 @@
+{
+    "sourceFile": "client/src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1752997074857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752997140257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,8 +136,11 @@\n .dashboard {\r\n   margin-top: 100px !important;\r\n }\r\n \r\n+.dark-mode .dashboard {\r\n+  color:green;\r\n+}\r\n .dashboard-menu h4 {\r\n   background-color: #434343 !important;\r\n   color: white;\r\n   padding: 20px 0px;\r\n"
+                },
+                {
+                    "date": 1752997189847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,11 +136,12 @@\n .dashboard {\r\n   margin-top: 100px !important;\r\n }\r\n \r\n-.dark-mode .dashboard {\r\n+.dark-mode .dashboard, .dashboard-menu h4 {\r\n   color:green;\r\n }\r\n+\r\n .dashboard-menu h4 {\r\n   background-color: #434343 !important;\r\n   color: white;\r\n   padding: 20px 0px;\r\n"
+                },
+                {
+                    "date": 1752997226901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,11 +136,11 @@\n .dashboard {\r\n   margin-top: 100px !important;\r\n }\r\n \r\n-.dark-mode .dashboard, .dashboard-menu h4 {\r\n-  color:green;\r\n-}\r\n+/* .dark-mode .dashboard, .dashboard-menu h4 { */\r\n+  /* color:green; */\r\n+/* } */\r\n \r\n .dashboard-menu h4 {\r\n   background-color: #434343 !important;\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1752997264217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,7 +148,6 @@\n }\r\n \r\n .card-img-top {\r\n   width: 100%;\r\n-  height: 300px;\r\n   object-fit: cover;\r\n }\r\n"
+                }
+            ],
+            "date": 1752997074857,
+            "name": "Commit-0",
+            "content": "@import url(\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap\");\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n/* font-family: 'Poppins', sans-serif; */\r\n/* font-family: 'Playfair Display', serif; */\r\n\r\n/* //navbar css */\r\n.navbar {\r\n  font-family: \"Poppins\", sans-serif;\r\n  font-size: 17px;\r\n  line-height: 26px;\r\n  text-transform: uppercase;\r\n  box-shadow: 0 8px 6px -6px gray;\r\n  --webkit-box-shadow: 0 8px 6px -6px gray;\r\n  border-bottom: solid gray !important;\r\n}\r\n\r\n.nav-link {\r\n  font-weight: 300 !important;\r\n}\r\n\r\n.active {\r\n  border-bottom: 2px solid black;\r\n}\r\n\r\n.navbar-brand {\r\n  font-weight: 700;\r\n  font-family: \"roboto\", sans-serif;\r\n  letter-spacing: 3px;\r\n}\r\n\r\n.search-form {\r\n  margin-right: 10px;\r\n  margin-top: 4px;\r\n}\r\n.search-form input {\r\n  border: none;\r\n  border-radius: 0;\r\n}\r\n.search-form button {\r\n  background-color: #000000;\r\n  border-radius: 0;\r\n  color: white;\r\n}\r\n\r\n/* =============================\r\n==========footer============= */\r\n\r\n.footer {\r\n  color: white;\r\n  padding: 25px;\r\n  background: #000000; /* fallback for old browsers */\r\n  background: -webkit-linear-gradient(\r\n    to right,\r\n    #434343,\r\n    #000000\r\n  ); /* Chrome 10-25, Safari 5.1-6 */\r\n  background: linear-gradient(to right, #434343, #000000);\r\n}\r\n\r\n.footer a {\r\n  text-decoration: none;\r\n  color: white;\r\n  padding: 10px;\r\n}\r\n\r\n.footer a:hover {\r\n  color: #ffefba;\r\n  border-bottom: 1px solid #ffefba;\r\n}\r\n/* =================================\r\n======== page not found css ======= */\r\n.pnf {\r\n  display: flex;\r\n  min-height: 65vh;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.pnf-title {\r\n  font-size: 100px;\r\n  font-weight: 700;\r\n}\r\n\r\n.pnf-heading {\r\n  font-weight: normal;\r\n}\r\n\r\n.pnf-btn {\r\n  color: black;\r\n  border: 1px solid black;\r\n  text-decoration: none;\r\n  padding: 10px;\r\n  margin-top: 10px;\r\n}\r\n.pnf-btn:hover {\r\n  background-color: black;\r\n  color: white;\r\n}\r\n/* ========================================= */\r\n/* =========contact us ========= */\r\n.contactus {\r\n  margin: 0;\r\n  padding: 0;\r\n  height: 70vh;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n/* ==================== */\r\n.product-link {\r\n  text-decoration: none !important;\r\n  color: black !important;\r\n}\r\n\r\n.cat-btn {\r\n  padding: 40px 0px;\r\n  font-size: 24px;\r\n  text-transform: uppercase;\r\n}\r\n.cat-btn:hover {\r\n  background-color: #434343;\r\n  color: white;\r\n}\r\n/* ================\r\n====dashboard\r\n=================== */\r\n\r\n.dashboard {\r\n  margin-top: 100px !important;\r\n}\r\n\r\n.dashboard-menu h4 {\r\n  background-color: #434343 !important;\r\n  color: white;\r\n  padding: 20px 0px;\r\n}\r\n\r\n.card-img-top {\r\n  width: 100%;\r\n  height: 300px;\r\n  object-fit: cover;\r\n}\r\n"
+        }
+    ]
+}

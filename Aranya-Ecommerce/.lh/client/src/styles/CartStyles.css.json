@@ -1,0 +1,54 @@
+{
+    "sourceFile": "client/src/styles/CartStyles.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1752993329206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752993392049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,69 +1,5 @@\n-/* Phase 1 - Step 5 - Cart Page Clean UI */\r\n .cart-page {\r\n-  margin-top: 80px;\r\n-  padding: 20px;\r\n-  background-color: #f9f9f9;\r\n-}\r\n-\r\n-.cart-page h1 {\r\n-  background: linear-gradient(to right, #00b09b, #96c93d);\r\n-  color: white;\r\n-  font-family: 'Poppins', sans-serif;\r\n-  padding: 15px;\r\n-  border-radius: 8px;\r\n-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);\r\n-}\r\n-\r\n-.cart-page .card {\r\n-  background-color: #ffffff;\r\n-  border-radius: 8px;\r\n-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);\r\n-  padding: 15px;\r\n-  margin-bottom: 15px;\r\n-  transition: transform 0.2s;\r\n-}\r\n-\r\n-.cart-page .card:hover {\r\n-  transform: scale(1.02);\r\n-}\r\n-\r\n-.cart-page .cart-summary {\r\n-  background-color: #ffffff;\r\n-  border-radius: 8px;\r\n-  padding: 20px;\r\n-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);\r\n-  margin-top: 30px;\r\n-}\r\n-\r\n-.cart-page .cart-remove-btn button {\r\n-  background-color: #ff4d4d;\r\n-  color: white;\r\n-  font-weight: 500;\r\n-  border-radius: 5px;\r\n-}\r\n-\r\n-.cart-page .cart-remove-btn button:hover {\r\n-  background-color: #e60000;\r\n-}\r\n-\r\n-.cart-page .btn-checkout {\r\n-  background: linear-gradient(to right, #00b09b, #96c93d);\r\n-  color: white;\r\n-  font-weight: bold;\r\n-  border-radius: 5px;\r\n-  width: 100%;\r\n-  margin-top: 15px;\r\n-}\r\n-\r\n-.cart-page .btn-checkout:hover {\r\n-  background: linear-gradient(to right, #96c93d, #00b09b);\r\n-}\r\n-\r\n-\r\n-\r\n-\r\n-.cart-page {\r\n   margin-top: 64px;\r\n }\r\n \r\n .cart-page h1 {\r\n"
+                },
+                {
+                    "date": 1752995058146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n   justify-content: center;\r\n }\r\n .cart-page .cart-summary {\r\n   text-align: center;\r\n-  /* margin-top: -140px !important; */\r\n+  margin-top: -140px !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1752995066981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n   justify-content: center;\r\n }\r\n .cart-page .cart-summary {\r\n   text-align: center;\r\n-  margin-top: -140px !important;\r\n+  /* margin-top: -140px !important; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1752995226702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,14 @@\n }\r\n .cart-page .cart-summary {\r\n   text-align: center;\r\n   /* margin-top: -140px !important; */\r\n+}\r\n+\r\n+.cart-page .btn-checkout {\r\n+  background: linear-gradient(to right, #00b09b, #96c93d);\r\n+  color: white;\r\n+  font-weight: bold;\r\n+  border-radius: 5px;\r\n+  width: 100%;\r\n+  margin-top: 15px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1752995286036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,5 +34,9 @@\n   font-weight: bold;\r\n   border-radius: 5px;\r\n   width: 100%;\r\n   margin-top: 15px;\r\n+}\r\n+\r\n+.cart-page .btn-checkout:hover {\r\n+  background: linear-gradient(to right, #96c93d, #00b09b);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1752995323203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,14 @@\n   text-align: center;\r\n   /* margin-top: -140px !important; */\r\n }\r\n \r\n+\r\n+.cart-page .cart-remove-btn button:hover {\r\n+  background-color: #e60000;\r\n+}\r\n+\r\n+\r\n .cart-page .btn-checkout {\r\n   background: linear-gradient(to right, #00b09b, #96c93d);\r\n   color: white;\r\n   font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1752995351779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,14 @@\n   text-align: center;\r\n   /* margin-top: -140px !important; */\r\n }\r\n \r\n+.cart-page .cart-remove-btn button {\r\n+  background-color: #ff4d4d;\r\n+  color: white;\r\n+  font-weight: 500;\r\n+  border-radius: 5px;\r\n+}\r\n \r\n .cart-page .cart-remove-btn button:hover {\r\n   background-color: #e60000;\r\n }\r\n"
+                },
+                {
+                    "date": 1752995430391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,12 @@\n   text-align: center;\r\n   /* margin-top: -140px !important; */\r\n }\r\n \r\n+.cart-page .card:hover {\r\n+  transform: scale(1.02);\r\n+}\r\n+\r\n .cart-page .cart-remove-btn button {\r\n   background-color: #ff4d4d;\r\n   color: white;\r\n   font-weight: 500;\r\n"
+                },
+                {
+                    "date": 1752995539091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,69 @@\n+.cart-page {\r\n+  margin-top: 64px;\r\n+}\r\n+\r\n+.cart-page h1 {\r\n+  padding: 15px !important;\r\n+  font-family: \"roboto\", sans-serif;\r\n+  font-weight: normal;\r\n+  background-color: rgba(0, 0, 255, 0.072) !important;\r\n+}\r\n+.cart-page h1 > p {\r\n+  font-size: 20px;\r\n+  margin-top: 10px;\r\n+}\r\n+\r\n+.cart-page .card {\r\n+  padding: 5px !important;\r\n+  height: 150px !important;\r\n+  margin-bottom: 5px !important;\r\n+}\r\n+.cart-page .cart-remove-btn {\r\n+  display: flex;\r\n+  align-items: center;\r\n+  justify-content: center;\r\n+}\r\n+.cart-page .cart-summary {\r\n+  text-align: center;\r\n+  /* margin-top: -140px !important; */\r\n+}\r\n+\r\n+.cart-page .card:hover {\r\n+  transform: scale(1.02);\r\n+}\r\n+\r\n+.cart-page .cart-remove-btn button {\r\n+  background-color: #ff4d4d;\r\n+  color: white;\r\n+  font-weight: 500;\r\n+  border-radius: 5px;\r\n+}\r\n+\r\n+.cart-page .cart-remove-btn button:hover {\r\n+  background-color: #e60000;\r\n+}\r\n+\r\n+\r\n+.cart-page .btn-checkout {\r\n+  background: linear-gradient(to right, #00b09b, #96c93d);\r\n+  color: white;\r\n+  font-weight: bold;\r\n+  border-radius: 5px;\r\n+  width: 100%;\r\n+  margin-top: 15px;\r\n+}\r\n+\r\n+.cart-page .btn-checkout:hover {\r\n+  background: linear-gradient(to right, #96c93d, #00b09b);\r\n+}\r\n+\r\n+\r\n+/* Product Card Hover Animation */\r\n+.card {\r\n+  transition: transform 0.3s ease, box-shadow 0.3s ease;\r\n+}\r\n+\r\n+.card:hover {\r\n+  transform: translateY(-8px);\r\n+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);\r\n+}\r\n"
+                }
+            ],
+            "date": 1752993329206,
+            "name": "Commit-0",
+            "content": "/* Phase 1 - Step 5 - Cart Page Clean UI */\r\n.cart-page {\r\n  margin-top: 80px;\r\n  padding: 20px;\r\n  background-color: #f9f9f9;\r\n}\r\n\r\n.cart-page h1 {\r\n  background: linear-gradient(to right, #00b09b, #96c93d);\r\n  color: white;\r\n  font-family: 'Poppins', sans-serif;\r\n  padding: 15px;\r\n  border-radius: 8px;\r\n  box-shadow: 0 4px 8px rgba(0,0,0,0.1);\r\n}\r\n\r\n.cart-page .card {\r\n  background-color: #ffffff;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 8px rgba(0,0,0,0.08);\r\n  padding: 15px;\r\n  margin-bottom: 15px;\r\n  transition: transform 0.2s;\r\n}\r\n\r\n.cart-page .card:hover {\r\n  transform: scale(1.02);\r\n}\r\n\r\n.cart-page .cart-summary {\r\n  background-color: #ffffff;\r\n  border-radius: 8px;\r\n  padding: 20px;\r\n  box-shadow: 0 2px 8px rgba(0,0,0,0.08);\r\n  margin-top: 30px;\r\n}\r\n\r\n.cart-page .cart-remove-btn button {\r\n  background-color: #ff4d4d;\r\n  color: white;\r\n  font-weight: 500;\r\n  border-radius: 5px;\r\n}\r\n\r\n.cart-page .cart-remove-btn button:hover {\r\n  background-color: #e60000;\r\n}\r\n\r\n.cart-page .btn-checkout {\r\n  background: linear-gradient(to right, #00b09b, #96c93d);\r\n  color: white;\r\n  font-weight: bold;\r\n  border-radius: 5px;\r\n  width: 100%;\r\n  margin-top: 15px;\r\n}\r\n\r\n.cart-page .btn-checkout:hover {\r\n  background: linear-gradient(to right, #96c93d, #00b09b);\r\n}\r\n\r\n\r\n\r\n\r\n.cart-page {\r\n  margin-top: 64px;\r\n}\r\n\r\n.cart-page h1 {\r\n  padding: 15px !important;\r\n  font-family: \"roboto\", sans-serif;\r\n  font-weight: normal;\r\n  background-color: rgba(0, 0, 255, 0.072) !important;\r\n}\r\n.cart-page h1 > p {\r\n  font-size: 20px;\r\n  margin-top: 10px;\r\n}\r\n\r\n.cart-page .card {\r\n  padding: 5px !important;\r\n  height: 150px !important;\r\n  margin-bottom: 5px !important;\r\n}\r\n.cart-page .cart-remove-btn {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n.cart-page .cart-summary {\r\n  text-align: center;\r\n  /* margin-top: -140px !important; */\r\n}"
+        }
+    ]
+}

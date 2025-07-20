@@ -1,0 +1,18 @@
+{
+    "sourceFile": "controllers/paymentController.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752854211101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752854211101,
+            "name": "Commit-0",
+            "content": "import Razorpay from 'razorpay';\r\n\r\nexport const createOrder = async (req, res) => {\r\n  try {\r\n    const instance = new Razorpay({\r\n      key_id: process.env.RAZORPAY_KEY_ID,\r\n      key_secret: process.env.RAZORPAY_SECRET_KEY,\r\n    });\r\n\r\n    const options = {\r\n      amount: Number(req.body.amount) * 100, // amount in smallest currency unit\r\n      currency: \"INR\",\r\n      receipt: \"receipt_order_\" + Math.random().toString(36).substring(2, 15),\r\n    };\r\n\r\n    instance.orders.create(options, (err, order) => {\r\n      if (err) return res.status(500).send({ success: false, err });\r\n      res.status(200).send({\r\n        success: true,\r\n        order,\r\n      });\r\n    });\r\n  } catch (error) {\r\n    res.status(500).send({ success: false, error: error.message });\r\n  }\r\n};\r\n"
+        }
+    ]
+}

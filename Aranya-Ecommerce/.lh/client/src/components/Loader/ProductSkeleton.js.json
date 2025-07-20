@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/components/Loader/ProductSkeleton.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752986018315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752986018315,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport Skeleton from 'react-loading-skeleton';\r\nimport 'react-loading-skeleton/dist/skeleton.css';\r\n\r\nconst ProductSkeleton = ({ cards = 6 }) => {\r\n  return (\r\n    <div className=\"home-page d-flex flex-wrap\">\r\n      {Array(cards)\r\n        .fill(0)\r\n        .map((_, i) => (\r\n          <div className=\"card m-2\" key={i} style={{ width: \"18rem\" }}>\r\n            <Skeleton height={300} />\r\n            <div className=\"card-body\">\r\n              <Skeleton height={20} width={`80%`} />\r\n              <Skeleton height={20} width={`60%`} />\r\n              <Skeleton height={30} width={`100%`} />\r\n            </div>\r\n          </div>\r\n        ))}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default ProductSkeleton;\r\n"
+        }
+    ]
+}

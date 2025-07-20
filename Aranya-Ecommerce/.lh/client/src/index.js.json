@@ -1,0 +1,26 @@
+{
+    "sourceFile": "client/src/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1752951875637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752952063238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n import { SearchProvider } from \"./context/search\";\r\n import { CartProvider } from \"./context/cart\";\r\n import \"antd/dist/reset.css\";\r\n \r\n+\r\n const root = ReactDOM.createRoot(document.getElementById(\"root\"));\r\n root.render(\r\n   <AuthProvider>\r\n     <SearchProvider>\r\n"
+                },
+                {
+                    "date": 1752997750621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n import { SearchProvider } from \"./context/search\";\r\n import { CartProvider } from \"./context/cart\";\r\n import \"antd/dist/reset.css\";\r\n \r\n-\r\n const root = ReactDOM.createRoot(document.getElementById(\"root\"));\r\n root.render(\r\n   <AuthProvider>\r\n     <SearchProvider>\r\n"
+                }
+            ],
+            "date": 1752951875637,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport './App.css';\r\nimport ReactDOM from \"react-dom/client\";\r\nimport \"./index.css\";\r\nimport App from \"./App\";\r\nimport reportWebVitals from \"./reportWebVitals\";\r\nimport { BrowserRouter } from \"react-router-dom\";\r\nimport { AuthProvider } from \"./context/auth\";\r\nimport { SearchProvider } from \"./context/search\";\r\nimport { CartProvider } from \"./context/cart\";\r\nimport \"antd/dist/reset.css\";\r\n\r\nconst root = ReactDOM.createRoot(document.getElementById(\"root\"));\r\nroot.render(\r\n  <AuthProvider>\r\n    <SearchProvider>\r\n      <CartProvider>\r\n        <BrowserRouter>\r\n          <App />\r\n        </BrowserRouter>\r\n      </CartProvider>\r\n    </SearchProvider>\r\n  </AuthProvider>\r\n);\r\n\r\n// If you want to start measuring performance in your app, pass a function\r\n// to log results (for example: reportWebVitals(console.log))\r\n// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals\r\nreportWebVitals();"
+        }
+    ]
+}

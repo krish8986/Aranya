@@ -1,0 +1,69 @@
+.cart-page {
+  margin-top: 64px;
+}
+
+.cart-page h1 {
+  padding: 15px !important;
+  font-family: "roboto", sans-serif;
+  font-weight: normal;
+  background-color: rgba(0, 0, 255, 0.072) !important;
+}
+.cart-page h1 > p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.cart-page .card {
+  padding: 5px !important;
+  height: 150px !important;
+  margin-bottom: 5px !important;
+}
+.cart-page .cart-remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-page .cart-summary {
+  text-align: center;
+  /* margin-top: -140px !important; */
+}
+
+.cart-page .card:hover {
+  transform: scale(1.02);
+}
+
+.cart-page .cart-remove-btn button {
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.cart-page .cart-remove-btn button:hover {
+  background-color: #e60000;
+}
+
+
+.cart-page .btn-checkout {
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.cart-page .btn-checkout:hover {
+  background: linear-gradient(to right, #96c93d, #00b09b);
+}
+
+
+/* Product Card Hover Animation */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

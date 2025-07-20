@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/styles/Homepage.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752987855340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752987855340,
+            "name": "Commit-0",
+            "content": ".banner-img {\r\n  margin-top: 60px;\r\n}\r\n\r\n.home-page h1 {\r\n  color: gray;\r\n  font-family: \"Playfair Display\", serif;\r\n}\r\n\r\n.home-page {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n}\r\n.home-page .card {\r\n  background-color: rgba(128, 128, 128, 0.097);\r\n  width: 18rem;\r\n}\r\n.home-page .card-name-price {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: space-between;\r\n}\r\n\r\n.home-page .card-price {\r\n  color: green;\r\n  font-weight: bold;\r\n}\r\n.home-page button {\r\n  border-radius: 0;\r\n  width: 100%;\r\n  border-top-left-radius: 5px;\r\n  border-bottom-right-radius: 5px;\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n}\r\n\r\n.home-page .card-text {\r\n  color: rgb(90, 89, 89);\r\n}\r\n\r\n.home-page .card img:hover {\r\n  transform: scale(0.9);\r\n}\r\n\r\n.home-page .card-img-top {\r\n  height: 300px !important;\r\n}\r\n/* ==================\r\nfilters\r\n============== */\r\n/* .filters h4 { */\r\n  /* margin-top: 100px; */\r\n  /* color: gray !important; */\r\n  /* border-bottom: 1px solid rgba(128, 128, 128, 0.337); */\r\n/* } */\r\n\r\n/* .ant-checkbox-wrapper:first-of-type { */\r\n  /* margin-left: 8px; */\r\n/* } */\r\n\r\n/* .ant-checkbox-wrapper { */\r\n  /* margin: 2px; */\r\n/* } */\r\n/* .ant-radio-wrapper { */\r\n  /* margin-bottom: 5px !important; */\r\n  /* margin-left: 10px; */\r\n/* } */\r\n\r\n/* .filters button { */\r\n  /* background-color: black; */\r\n  /* width: 100%; */\r\n  /* border: none; */\r\n  /* border-radius: 0; */\r\n  /* margin-top: 20px; */\r\n/* } */\r\n\r\n/* .loadmore { */\r\n  /* color: green; */\r\n  /* font-weight: bold; */\r\n  /* font-size: 20px !important; */\r\n/* } */"
+        }
+    ]
+}

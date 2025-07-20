@@ -1,0 +1,22 @@
+{
+    "sourceFile": "server.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1752854270631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752854288919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n //routes\r\n app.use(\"/api/v1/auth\", authRoutes);\r\n app.use(\"/api/v1/category\", categoryRoutes);\r\n app.use(\"/api/v1/product\", productRoutes);\r\n+app.use('/api/v1/payment', paymentRoute);\r\n \r\n //rest api\r\n app.get(\"/\", (req, res) => {\r\n   res.send(\"<h1>Welcome to ecommerce app</h1>\");\r\n"
+                }
+            ],
+            "date": 1752854270631,
+            "name": "Commit-0",
+            "content": "import express from \"express\";\r\nimport colors from \"colors\";\r\nimport dotenv from \"dotenv\";\r\nimport morgan from \"morgan\";\r\nimport connectDB from \"./config/db.js\";\r\nimport authRoutes from \"./routes/authRoute.js\";\r\nimport categoryRoutes from \"./routes/categoryRoutes.js\";\r\nimport productRoutes from \"./routes/productRoutes.js\";\r\nimport cors from \"cors\";\r\nimport helmet from \"helmet\";\r\nimport rateLimit from \"express-rate-limit\";\r\nimport paymentRoute from './routes/paymentRoute.js';\r\n\r\n//configure env\r\ndotenv.config();\r\n\r\n//databse config\r\nconnectDB();\r\n\r\n//rest object\r\nconst app = express();\r\n\r\n//middelwares\r\napp.use(cors());\r\napp.use(helmet()); // 👉 Security headers\r\napp.use(express.json());\r\napp.use(morgan(\"dev\"));\r\n\r\n// Rate limiting (to prevent abuse / DoS)\r\nconst limiter = rateLimit({\r\n  windowMs: 15 * 60 * 1000, // 15 minutes\r\n  max: 100, // Limit each IP to 100 requests per windowMs\r\n  standardHeaders: true,\r\n  legacyHeaders: false,\r\n});\r\napp.use(limiter);\r\n\r\n//routes\r\napp.use(\"/api/v1/auth\", authRoutes);\r\napp.use(\"/api/v1/category\", categoryRoutes);\r\napp.use(\"/api/v1/product\", productRoutes);\r\n\r\n//rest api\r\napp.get(\"/\", (req, res) => {\r\n  res.send(\"<h1>Welcome to ecommerce app</h1>\");\r\n});\r\n\r\n//PORT\r\nconst PORT = process.env.PORT || 8000;\r\n\r\n//run listen\r\napp.listen(PORT, () => {\r\n  console.log(\r\n    `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan\r\n      .white\r\n  );\r\n});"
+        }
+    ]
+}

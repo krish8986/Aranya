@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/pages/PaymentSuccess.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752982556135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752982556135,
+            "name": "Commit-0",
+            "content": "import React, { useEffect, useState } from \"react\";\r\nimport Layout from \"../components/Layouts/Layout\";\r\nimport Confetti from \"react-confetti\";\r\nimport { useNavigate } from \"react-router-dom\";\r\n\r\nconst PaymentSuccess = () => {\r\n  const [showConfetti, setShowConfetti] = useState(true);\r\n  const navigate = useNavigate();\r\n\r\n  useEffect(() => {\r\n    // Stop confetti after 5 seconds\r\n    const timer = setTimeout(() => {\r\n      setShowConfetti(false);\r\n    }, 5000);\r\n\r\n    // Redirect after 7 seconds\r\n    const redirectTimer = setTimeout(() => {\r\n      navigate(\"/\");\r\n    }, 7000);\r\n\r\n    return () => {\r\n      clearTimeout(timer);\r\n      clearTimeout(redirectTimer);\r\n    };\r\n  }, [navigate]);\r\n\r\n  return (\r\n    <Layout title=\"Payment Success - Aranya\">\r\n      {showConfetti && <Confetti />}\r\n      <div\r\n        style={{\r\n          height: \"70vh\",\r\n          display: \"flex\",\r\n          flexDirection: \"column\",\r\n          justifyContent: \"center\",\r\n          alignItems: \"center\",\r\n          textAlign: \"center\",\r\n        }}\r\n      >\r\n        <h1>🎉 Payment Successful!</h1>\r\n        <p>Thank you for your order! We’ll process it shortly.</p>\r\n        <p>Redirecting to homepage...</p>\r\n      </div>\r\n    </Layout>\r\n  );\r\n};\r\n\r\nexport default PaymentSuccess;\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "razorpayController.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752862709195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752862709195,
+            "name": "Commit-0",
+            "content": "// backend/razorpayController.js\r\nimport Razorpay from \"razorpay\";\r\nimport crypto from \"crypto\";\r\nimport dotenv from \"dotenv\";\r\ndotenv.config();\r\n\r\nconst razorpay = new Razorpay({\r\n  key_id: process.env.RAZORPAY_KEY_ID,\r\n  key_secret: process.env.RAZORPAY_KEY_SECRET,\r\n});\r\n\r\nexport const createOrder = async (req, res) => {\r\n  try {\r\n    const amount = req.body.amount * 100; // in paise\r\n    const options = { amount, currency: \"INR\", receipt: `rcpt_${Date.now()}` };\r\n    const order = await razorpay.orders.create(options);\r\n    return res.json(order);\r\n  } catch (err) {\r\n    console.error(\"Order creation failed:\", err);\r\n    return res.status(500).json({ error: err.message });\r\n  }\r\n};\r\n\r\nexport const verifyPayment = (req, res) => {\r\n  const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;\r\n  const hmac = crypto\r\n    .createHmac(\"sha256\", process.env.RAZORPAY_KEY_SECRET)\r\n    .update(`${razorpay_order_id}|${razorpay_payment_id}`)\r\n    .digest(\"hex\");\r\n\r\n  if (hmac === razorpay_signature) {\r\n    // Payment valid: save order to DB\r\n    return res.json({ success: true });\r\n  } else {\r\n    return res.status(400).json({ error: \"Payment verification failed\" });\r\n  }\r\n};\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/pages/Search.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752985226109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752985226109,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport Layout from \"./../components/Layouts/Layout\";\r\nimport { useSearch } from \"../context/search\";\r\nconst Search = () => {\r\n  const [values, setValues] = useSearch();\r\n  return (\r\n    <Layout title={\"Search results\"}>\r\n      <div className=\"container\">\r\n        <div className=\"text-center\">\r\n          <h1>Search Results</h1>\r\n          <h6>\r\n            {values?.results.length < 1\r\n              ? \"No Products Found\"\r\n              : `Found ${values?.results.length}`}\r\n          </h6>\r\n          <div className=\"d-flex flex-wrap mt-4\">\r\n            {values?.results.map((p) => (\r\n              <div className=\"card m-2\" style={{ width: \"18rem\" }}>\r\n                <img\r\n                  src={`/api/v1/product/product-photo/${p._id}`}\r\n                  className=\"card-img-top\"\r\n                  alt={p.name}\r\n                  loading=\"lazy\"\r\n                />\r\n                <div className=\"card-body\">\r\n                  <h5 className=\"card-title\">{p.name}</h5>\r\n                  <p className=\"card-text\">\r\n                    {p.description.substring(0, 30)}...\r\n                  </p>\r\n                  <p className=\"card-text\"> ₹{p.price}</p>\r\n                  <button class=\"btn btn-primary ms-1\">More Details</button>\r\n                  <button class=\"btn btn-secondary ms-1\">ADD TO CART</button>\r\n                </div>\r\n              </div>\r\n            ))}\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </Layout>\r\n  );\r\n};\r\n\r\nexport default Search;"
+        }
+    ]
+}

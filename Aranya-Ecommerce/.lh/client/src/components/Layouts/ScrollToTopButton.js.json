@@ -1,0 +1,18 @@
+{
+    "sourceFile": "client/src/components/Layouts/ScrollToTopButton.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752985578971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752985578971,
+            "name": "Commit-0",
+            "content": "import React, { useState, useEffect } from 'react';\r\nimport { FaArrowCircleUp } from 'react-icons/fa';\r\nimport '../../App.css';\r\n\r\nconst ScrollToTopButton = () => {\r\n  const [isVisible, setIsVisible] = useState(false);\r\n\r\n  const toggleVisibility = () => {\r\n    if (window.scrollY > 300) {\r\n      setIsVisible(true);\r\n    } else {\r\n      setIsVisible(false);\r\n    }\r\n  };\r\n\r\n  const scrollToTop = () => {\r\n    window.scrollTo({\r\n      top: 0,\r\n      behavior: 'smooth',\r\n    });\r\n  };\r\n\r\n  useEffect(() => {\r\n    window.addEventListener('scroll', toggleVisibility);\r\n    return () => window.removeEventListener('scroll', toggleVisibility);\r\n  }, []);\r\n\r\n  return (\r\n    isVisible && (\r\n      <div className=\"scroll-to-top\" onClick={scrollToTop}>\r\n        <FaArrowCircleUp size={40} />\r\n      </div>\r\n    )\r\n  );\r\n};\r\n\r\nexport default ScrollToTopButton;\r\n"
+        }
+    ]
+}

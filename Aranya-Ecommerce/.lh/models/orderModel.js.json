@@ -1,0 +1,18 @@
+{
+    "sourceFile": "models/orderModel.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1752862246392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1752862246392,
+            "name": "Commit-0",
+            "content": "import mongoose from \"mongoose\";\r\n\r\nconst orderSchema = new mongoose.Schema(\r\n  {\r\n    products: [\r\n      {\r\n        type: mongoose.ObjectId,\r\n        required: true,\r\n        ref: \"Products\",\r\n      },\r\n    ],\r\n\r\n    payment: {\r\n      type: Object,\r\n      required: true,\r\n    },\r\n    buyer: {\r\n      type: mongoose.ObjectId,\r\n      ref: \"users\",\r\n      required: true,\r\n    },\r\n    status: {\r\n      type: String,\r\n      default: \"Not Process\",\r\n      enum: [\"Not Process\", \"Processing\", \"Shipped\", \"delivered\", \"cancelled\"],\r\n    },\r\n  },\r\n  { timestamps: true }\r\n);\r\n\r\nexport default mongoose.model(\"Order\", orderSchema);"
+        }
+    ]
+}

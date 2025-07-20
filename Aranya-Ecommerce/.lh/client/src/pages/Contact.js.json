@@ -1,0 +1,22 @@
+{
+    "sourceFile": "client/src/pages/Contact.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1752985173607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752996598393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,16 @@\n import Layout from \"./../components/Layouts/Layout\";\r\n import { BiMailSend, BiPhoneCall, BiSupport } from \"react-icons/bi\";\r\n const Contact = () => {\r\n   return (\r\n-    <Layout title={\"contact us - Aranya\"}>\r\n+    // <Layout title={\"contact us - Aranya\"}>\r\n+    <Layout\r\n+  title={\"Contact Aranya | Get in Touch\"}\r\n+  description={\"Have questions or bulk orders? Contact Aranya for premium biodegradable and eco-friendly products.\"}\r\n+  keywords={\"contact aranya, get in touch, biodegradable, bulk orders, eco-friendly contact\"}\r\n+  author={\"Krishna Kumar\"}\r\n+>\r\n+\r\n       <div className=\"row contactus \">\r\n         <div className=\"col-md-6 \">\r\n           <img\r\n             src=\"/images/contactus.jpg\"\r\n"
+                }
+            ],
+            "date": 1752985173607,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport Layout from \"./../components/Layouts/Layout\";\r\nimport { BiMailSend, BiPhoneCall, BiSupport } from \"react-icons/bi\";\r\nconst Contact = () => {\r\n  return (\r\n    <Layout title={\"contact us - Aranya\"}>\r\n      <div className=\"row contactus \">\r\n        <div className=\"col-md-6 \">\r\n          <img\r\n            src=\"/images/contactus.jpg\"\r\n            alt=\"contactus\"\r\n            style={{ width: \"100%\" }}\r\n            loading=\"lazy\"\r\n          />\r\n        </div>\r\n        <div className=\"col-md-4\">\r\n          <h1 className=\"bg-dark p-2 text-white text-center\">CONTACT US</h1>\r\n          <p className=\"text-justify mt-2\">\r\n            any query and info about product feel free to call anytime we 24X7 available.\r\n          </p>\r\n          <p className=\"mt-3\">\r\n            <BiMailSend /> : www.help@aranya.com\r\n          </p>\r\n          <p className=\"mt-3\">\r\n            <BiPhoneCall /> : 012-3456789\r\n          </p>\r\n          <p className=\"mt-3\">\r\n            <BiSupport /> : 1800-0000-0000 (toll free)\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </Layout>\r\n  );\r\n};\r\n\r\nexport default Contact;"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "routes/productRoutes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1752852756898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752862751850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,5 +73,11 @@\n \r\n //payments\r\n // router.post(\"/braintree/payment\", requireSignIn, brainTreePaymentController);\r\n \r\n+\r\n+//payment--\r\n+router.post(\"/razorpay/create-order\", requireSignIn, createOrder);\r\n+router.post(\"/razorpay/verify\", requireSignIn, verifyPayment);\r\n+\r\n+\r\n export default router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1752865986830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,10 @@\n   productPhotoController,\r\n   relatedProductController,\r\n   searchProductController,\r\n   updateProductController,\r\n+  createRazorpayOrder,\r\n+  verifyRazorpayPayment,\r\n } from \"../controllers/productController.js\";\r\n import formidable from \"express-formidable\";\r\n import { requireSignIn, isAdmin } from \"../middlewares/authMiddleware.js\";\r\n \r\n@@ -75,9 +77,9 @@\n // router.post(\"/braintree/payment\", requireSignIn, brainTreePaymentController);\r\n \r\n \r\n //payment--\r\n-router.post(\"/razorpay/create-order\", requireSignIn, createOrder);\r\n-router.post(\"/razorpay/verify\", requireSignIn, verifyPayment);\r\n \r\n+router.post(\"/razorpay/create-order\", requireSignIn, createRazorpayOrder);\r\n+router.post(\"/razorpay/verify\", requireSignIn, verifyRazorpayPayment);\r\n \r\n export default router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1752867702580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,11 @@\n   searchProductController,\r\n   updateProductController,\r\n   createRazorpayOrder,\r\n   verifyRazorpayPayment,\r\n+  razorpayOrderController,\r\n+  razorpayVerifyController\r\n+\r\n } from \"../controllers/productController.js\";\r\n import formidable from \"express-formidable\";\r\n import { requireSignIn, isAdmin } from \"../middlewares/authMiddleware.js\";\r\n \r\n@@ -81,5 +84,9 @@\n \r\n router.post(\"/razorpay/create-order\", requireSignIn, createRazorpayOrder);\r\n router.post(\"/razorpay/verify\", requireSignIn, verifyRazorpayPayment);\r\n \r\n+router.post(\"/razorpay/order\", razorpayOrderController);\r\n+router.post(\"/razorpay/verify\", razorpayVerifyController);\r\n+\r\n+\r\n export default router;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1752852756898,
+            "name": "Commit-0",
+            "content": "import express from \"express\";\r\nimport {\r\n  // brainTreePaymentController,\r\n  // braintreeTokenController,\r\n  createProductController,\r\n  deleteProductController,\r\n  getProductController,\r\n  getSingleProductController,\r\n  productCategoryController,\r\n  productCountController,\r\n  productFiltersController,\r\n  productListController,\r\n  productPhotoController,\r\n  relatedProductController,\r\n  searchProductController,\r\n  updateProductController,\r\n} from \"../controllers/productController.js\";\r\nimport formidable from \"express-formidable\";\r\nimport { requireSignIn, isAdmin } from \"../middlewares/authMiddleware.js\";\r\n\r\nconst router = express.Router();\r\n\r\n//routes\r\nrouter.post(\r\n  \"/create-product\",\r\n  requireSignIn,\r\n  isAdmin,\r\n  formidable(),\r\n  createProductController\r\n);\r\n//routes\r\nrouter.put(\r\n  \"/update-product/:pid\",\r\n  requireSignIn,\r\n  isAdmin,\r\n  formidable(),\r\n  updateProductController\r\n);\r\n\r\n//get products\r\nrouter.get(\"/get-product\", getProductController);\r\n\r\n//single product\r\nrouter.get(\"/get-product/:slug\", getSingleProductController);\r\n\r\n//get photo\r\nrouter.get(\"/product-photo/:pid\", productPhotoController);\r\n\r\n//delete rproduct\r\nrouter.delete(\"/delete-product/:pid\", deleteProductController);\r\n\r\n//filter product\r\nrouter.post(\"/product-filters\", productFiltersController);\r\n\r\n//product count\r\nrouter.get(\"/product-count\", productCountController);\r\n\r\n//product per page\r\nrouter.get(\"/product-list/:page\", productListController);\r\n\r\n//search product\r\nrouter.get(\"/search/:keyword\", searchProductController);\r\n\r\n//similar product\r\nrouter.get(\"/related-product/:pid/:cid\", relatedProductController);\r\n\r\n//category wise product\r\nrouter.get(\"/product-category/:slug\", productCategoryController);\r\n\r\n//payments routes\r\n//token\r\n// router.get(\"/braintree/token\", braintreeTokenController);\r\n\r\n//payments\r\n// router.post(\"/braintree/payment\", requireSignIn, brainTreePaymentController);\r\n\r\nexport default router;"
+        }
+    ]
+}
