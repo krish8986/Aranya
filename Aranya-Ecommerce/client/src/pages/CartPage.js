@@ -162,7 +162,7 @@ const handleRazorpayPayment = async () => {
       description: "Test Transaction",
       order_id: order.id,
       handler: async function (response) {
-        const verifyRes = await axios.post("/api/v1/product/razorpay/verify", {
+        const verifyRes = await axios.post(`${process.env.REACT_APP_API}/api/v1/product/razorpay/verify`, {
           razorpay_order_id: response.razorpay_order_id,
           razorpay_payment_id: response.razorpay_payment_id,
           razorpay_signature: response.razorpay_signature,
