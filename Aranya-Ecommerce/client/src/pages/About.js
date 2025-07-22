@@ -16,7 +16,7 @@ const About = () => {
           <img
             src="/images/aboutus.jpg"
             alt="contactus"
-            style={{ width: "100%" }}
+            style={{ width: "90%" }}
             loading="lazy"
           />
         </div>
