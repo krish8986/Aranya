@@ -224,7 +224,7 @@ const handleRazorpayPayment = async () => {
               <div className="row card flex-row mb-3" key={item._id}>
                 <div className="col-md-4">
                   <img
-                    src={`/api/v1/product/product-photo/${item._id}`}
+                    src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${item._id}`}
                     className="card-img-top"
                     alt={item.name}
                     width="100%"
