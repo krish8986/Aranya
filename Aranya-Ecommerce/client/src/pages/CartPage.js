@@ -150,7 +150,7 @@ const handleRazorpayPayment = async () => {
   try {
     const amount = cart.reduce((acc, item) => acc + item.price, 0);
 
-    const { data: order } = await axios.post("/api/v1/product/razorpay/order", {
+    const { data: order } = await axios.post(`${process.env.REACT_APP_API}/api/v1/product/razorpay/order`, {
       amount,
     });
 
