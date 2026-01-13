@@ -150,10 +150,10 @@ Payment verification handled on backend
 
 ## Current Status
 
-✅ UI & Deployment Complete
-✅ Razorpay Integrated
-⚠️ Orders backend & frontend finalization in progress
-⚠️ Product image rendering optimization ongoing
+ UI & Deployment Completed
+ Razorpay Integrated completed
+ Orders backend & frontend finalization in progress
+ Product image rendering optimization ongoing
 
 ## Author
 
