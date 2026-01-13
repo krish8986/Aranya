@@ -43,7 +43,7 @@ Deployment
 Render (Frontend & Backend)
 
 ## Key Features
-🔐 Authentication & Authorization
+** Authentication & Authorization
 
 User signup & login
 
